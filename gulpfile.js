@@ -1,3 +1,4 @@
+'use strict';
 // generated on 2016-10-26 using generator-webapp 2.2.0
 const gulp = require('gulp');
 const gulpLoadPlugins = require('gulp-load-plugins');
@@ -5,9 +6,16 @@ const browserSync = require('browser-sync');
 const del = require('del');
 const wiredep = require('wiredep').stream;
 const runSequence = require('run-sequence');
+var sass = require('gulp-sass');
 
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
+
+gulp.task('sass', function () {
+  return gulp.src('app/styles/**/*.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest('app/styles'));
+});
 
 gulp.task('styles', () => {
   return gulp.src('app/styles/*.scss')
@@ -110,9 +118,9 @@ gulp.task('serve', () => {
       '.tmp/fonts/**/*'
     ]).on('change', reload);
 
-    gulp.watch('app/styles/**/*.scss', ['styles']);
-      gulp.watch('app/scripts/**/*.js', ['scripts']);
-      gulp.watch('app/fonts/**/*', ['fonts']);
+    gulp.watch('app/styles/**/*.scss', ['styles', 'sass']);
+    gulp.watch('app/scripts/**/*.js', ['scripts']);
+    gulp.watch('app/fonts/**/*', ['fonts']);
     gulp.watch('bower.json', ['wiredep', 'fonts']);
   });
 });
