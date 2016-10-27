@@ -1,44 +1,64 @@
 html {
-  font-size: 62.5%; }
+  font-size: 62.5%;
+}
 
 body {
   font-size: 1.6rem;
   line-height: 1.5;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
 
 img {
-  max-width: 100%; }
+  max-width: 100%;
+}
 
 .container {
   width: 85%;
-  margin: 0 auto; }
+  margin: 0 auto;
+}
 
 .banner {
-  height: 10%; }
+  height: 10%;
+}
+
+hr {
+  color: grey;
+  margin-bottom: 20px;
+}
 
 .header {
   margin-top: 20px;
   display: flex;
   height: 55px;
-  border-bottom: 3px solid grey;
-  padding-bottom: 10px;
-  margin-bottom: 20px; }
-  .header h1 {
-    flex-basis: 90%;
-    text-align: end;
-    font-size: 2.5rem;
-    text-transform: uppercase;
-    order: 1; }
-  .header svg {
-    flex-basis: 10%; }
+  margin-bottom: 20px;
+}
 
-.main {
+.header h1 {
+  flex-basis: 90%;
+  text-align: end;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  order: 1;
+}
+
+.header .logo {
+  flex-basis: 10%;
+}
+
+main {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between; }
-  .main figure {
-    margin: 0; }
-    .main figure figcaption {
-      margin-bottom: 15px; }
-    .main figure h3, .main figure p {
-      margin: 0; }
+  justify-content: space-between;
+}
+
+main figure {
+  margin: 0;
+}
+
+main figure figcaption {
+  margin-bottom: 15px;
+}
+
+main figure h3, main figure p {
+  margin: 0;
+}

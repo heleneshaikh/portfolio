@@ -5,7 +5,7 @@ html {
 body {
   font-size: 1.6rem;
   line-height: 1.5;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 img {
@@ -21,12 +21,15 @@ img {
   height: 10%;
 }
 
+hr {
+  color: grey;
+  margin-bottom: 20px;
+}
+
 .header {
   margin-top: 20px;
   display: flex;
   height: 55px;
-  border-bottom: 3px solid grey;
-  padding-bottom: 10px;
   margin-bottom: 20px;
   h1 {
     flex-basis: 90%;
